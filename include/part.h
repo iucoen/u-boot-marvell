@@ -46,6 +46,8 @@ struct block_drvr {
 #define DEV_TYPE_CDROM		0x05	/* CD-ROM */
 #define DEV_TYPE_OPDISK		0x07	/* optical disk */
 
+#define MAX_SEARCH_PARTITIONS 64
+
 typedef struct disk_partition {
 	lbaint_t	start;	/* # of first block in partition	*/
 	lbaint_t	size;	/* number of blocks in partition	*/
