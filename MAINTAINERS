@@ -262,6 +262,7 @@ S:	Maintained
 F:	include/efi_loader.h
 F:	lib/efi_loader/
 F:	cmd/bootefi.c
+F:	tools/file2include.c
 
 FLATTENED DEVICE TREE
 M:	Simon Glass <sjg@chromium.org>

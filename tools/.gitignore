@@ -3,6 +3,7 @@
 /bmp_logo
 /envcrc
 /fdtgrep
+/file2include
 /fit_check_sign
 /fit_info
 /gen_eth_addr

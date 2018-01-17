@@ -58,6 +58,8 @@ mkenvimage-objs := mkenvimage.o os_support.o lib/crc32.o
 hostprogs-y += dumpimage mkimage
 hostprogs-$(CONFIG_FIT_SIGNATURE) += fit_info fit_check_sign
 
+hostprogs-$(CONFIG_CMD_BOOTEFI_SELFTEST) += file2include
+
 FIT_SIG_OBJS-$(CONFIG_FIT_SIGNATURE) := common/image-sig.o
 # Flattened device tree objects
 LIBFDT_OBJS := $(addprefix lib/libfdt/, \
@@ -111,6 +113,7 @@ dumpimage-objs := $(dumpimage-mkimage-objs) dumpimage.o
 mkimage-objs   := $(dumpimage-mkimage-objs) mkimage.o
 fit_info-objs   := $(dumpimage-mkimage-objs) fit_info.o
 fit_check_sign-objs   := $(dumpimage-mkimage-objs) fit_check_sign.o
+file2include-objs := file2include.o
 
 # Build a libfdt Python module if swig is available
 # Use 'sudo apt-get install swig libpython-dev' to enable this
